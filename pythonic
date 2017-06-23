@@ -1,0 +1,27 @@
+1) Variable exchange
+    a, b = b, a
+
+2) loop iteration
+    for i in range(10):
+       print(i)
+      
+3) Traverse with index location
+    colors = ['red', 'green', 'blue']
+    for i, color in enumerate(colors):
+        print (i '---->' color)
+        
+       
+4) String combination
+    names = ['peter', 'bob', 'sean', 'jecky']
+    print (',' .join(names))
+
+5) Open file
+    with open ('a.txt') as f:
+        line = f.read()
+     
+6) List compresentions
+    [i*2 for i in range(10)]
+
+7) Decorator
+
+       
