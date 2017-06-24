@@ -22,6 +22,102 @@
 6) List compresentions
     [i*2 for i in range(10)]
 
-7) Decorator
+7) List append and insert
 
-       
+    from collections import deque
+
+    names = ['raymond', 'rachel', 'mattew', 'roger']
+    names_tmp = deque(names)
+
+    bb = names_tmp.popleft()
+    names_tmp.pop()
+
+    names_tmp.appendleft('mark')
+    names_tmp.append('ryan')
+
+    print(names_tmp)
+    print(bb)
+
+8) Dictionary iteration
+    d = {'first' : 'ryan', 'second' : 'sean', 'third' : 'candy'}
+    for k, v in d.items():
+	    print (k)
+	    print (v)
+	    print (k + '---->' + v)
+
+9) Chain comparison
+    age = 20
+    if 18 < age < 30:
+	    print ('you can do it now')
+
+    print (False==False==True) ## false
+ 
+10) for + else
+    theflag =1
+    mylist = ('2', '3', '4', '5', '1', '6')
+
+    for i in mylist:
+	    if i == str(theflag):
+		    print('finding the flag')
+		    break
+    else:
+	    raise ValueError('list argument missing the flag')
+
+11) String format
+    s1 = 'foofish.net'
+    s2 = 'vttalk'
+    s3 = 'welcome to %s and following %s' % (s1, s2)
+    print (s3)
+
+    s4= 'welcome to {blog} and following {wechat}' .format(blog = 'foofish.net', wechat = 'vttalk')
+    print(s4)
+    
+    s5 = 'This is my name {name} and my age is {age}' .format(name = 'wyh', age = 17)
+    print(s5)
+
+12) list split
+    s1 = 'I love python and I love family'
+
+    s2 = s1[::-1]
+    print(s2)
+
+    s3 = s1[1:5]
+    print(s3)
+
+    s4= s1[1::3]
+    print(s4)
+
+13) Generator
+    def Fib(n):
+	    a, b = 0, 1
+	    while  a < n:
+		    yield a
+		    a, b = b, a+b
+
+    f=Fib(10)
+    for i in f:
+	    print (i)
+
+14) Get the element in dictionary
+    d = {'name': 'wyh'}
+
+    d1=d.get('name', 'unknow')
+    d2=d.get('age', 'unknow')
+
+    print(d1)
+    print(d2)
+
+15) set default value for dictionary
+    from collections import defaultdict
+
+    data = {'foo':10, 'bar':20, 'foo':30, 'bar':40}
+    groups = defaultdict(list)
+
+    for(key,value) in data.items():
+	    groups[key].append(value)
+
+    print(groups)
+
+
+
+ 
